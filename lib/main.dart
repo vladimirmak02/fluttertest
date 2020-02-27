@@ -15,7 +15,7 @@ class Home extends StatelessWidget {
       ),
       body: Center(
         child: Text(
-          'wow',
+          'woooow',
           style: TextStyle(
               fontSize: 30,
               fontWeight: FontWeight.bold,

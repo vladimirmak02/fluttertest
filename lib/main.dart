@@ -14,7 +14,9 @@ class Home extends StatelessWidget {
         backgroundColor: Colors.green[600],
       ),
       body: Center(
-        child: Text(
+        child: Image.asset('assets/car.jpg'),
+
+        /*child: Text(
           'woooow',
           style: TextStyle(
               fontSize: 30,
@@ -22,7 +24,7 @@ class Home extends StatelessWidget {
               letterSpacing: 2,
               color: Colors.black38,
               fontFamily: 'Oxanium'),
-        ),
+        ),*/
       ),
       floatingActionButton: FloatingActionButton(
         onPressed: () {},

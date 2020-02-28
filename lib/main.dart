@@ -13,10 +13,27 @@ class Home extends StatelessWidget {
         centerTitle: true,
         backgroundColor: Colors.green[600],
       ),
-      body: Center(
-        child: Image.asset('assets/car.jpg'),
+      body: Container(
+        padding: EdgeInsets.all(10),
+        color: Colors.grey[400],
+        child: Text('Hello'),
+      ),
+      /*Center(
+        child: IconButton(
+          onPressed: () {
+            print("wow");
+          },
+          icon: Icon(Icons.email),
+          color: Colors.greenAccent,
+        ),
+        Icon(
+          Icons.airline_seat_legroom_normal,
+          color: Colors.greenAccent,
+          size: 50,
+        ),
+        Image.asset('assets/car.jpg'),
 
-        /*child: Text(
+        child: Text(
           'woooow',
           style: TextStyle(
               fontSize: 30,
@@ -24,8 +41,8 @@ class Home extends StatelessWidget {
               letterSpacing: 2,
               color: Colors.black38,
               fontFamily: 'Oxanium'),
-        ),*/
-      ),
+        ),
+      ),*/
       floatingActionButton: FloatingActionButton(
         onPressed: () {},
         child: Text('+'),

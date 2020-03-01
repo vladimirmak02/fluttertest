@@ -1,8 +1,7 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
-void main() => runApp(MaterialApp(
-      home: Home()
-    ));
+void main() => runApp(MaterialApp(home: Home()));
 
 class Home extends StatelessWidget {
   @override
@@ -13,10 +12,40 @@ class Home extends StatelessWidget {
         centerTitle: true,
         backgroundColor: Colors.green[600],
       ),
-      body: Container(
-        padding: EdgeInsets.all(10),
-        color: Colors.grey[400],
-        child: Text('Hello'),
+      body: Padding(
+        padding: const EdgeInsets.symmetric(vertical: 10, horizontal: 10),
+        child: Row(
+          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: <Widget>[
+            Expanded(
+                flex: 10,
+                child: Image.asset('assets/car.jpg')),
+            Expanded(
+
+              child: Container(
+                padding: EdgeInsets.all(10),
+                color: Colors.amber,
+                child: Text('1'),
+              ),
+            ),
+            Column(
+              mainAxisAlignment: MainAxisAlignment.start,
+              children: <Widget>[
+                Container(
+                  padding: EdgeInsets.all(10),
+                  color: Colors.blue,
+                  child: Text('2'),
+                ),
+                Container(
+                  padding: EdgeInsets.all(10),
+                  color: Colors.red,
+                  child: Text('3'),
+                ),
+              ],
+            ),
+          ],
+        ),
       ),
       /*Center(
         child: IconButton(
@@ -34,7 +63,7 @@ class Home extends StatelessWidget {
         Image.asset('assets/car.jpg'),
 
         child: Text(
-          'woooow',
+          'ti debil',
           style: TextStyle(
               fontSize: 30,
               fontWeight: FontWeight.bold,
@@ -45,7 +74,7 @@ class Home extends StatelessWidget {
       ),*/
       floatingActionButton: FloatingActionButton(
         onPressed: () {},
-        child: Text('+'),
+        child: Text('da'),
         backgroundColor: Colors.green[600],
       ),
     );

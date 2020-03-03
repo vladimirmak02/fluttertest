@@ -17,21 +17,20 @@ class Profile extends StatelessWidget {
           elevation: 0,
         ),
         body: Container(
-          margin: EdgeInsets.all(250),
+          margin: EdgeInsets.all(25),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: <Widget>[
-//              Container(
-//                margin: EdgeInsets.only(left: 50),
-//                child: CircleAvatar(
-//                  backgroundImage: AssetImage('assets/thumb.jpg'),
-//                  radius: 50,
-//                ),
-//              ),
-//              Divider(
-//                height: 40,
-//                color: Colors.white,
-//              ),
+              Center(
+                child: CircleAvatar(
+                  backgroundImage: AssetImage('assets/thumb.jpg'),
+                  radius: 50,
+                ),
+              ),
+              Divider(
+                height: 40,
+                color: Colors.white,
+              ),
               Text(
                 'NAME',
                 style: TextStyle(

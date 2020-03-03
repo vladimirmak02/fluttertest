@@ -1,11 +1,20 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
-void main() => runApp(MaterialApp(
+void main() =>
+    runApp(MaterialApp(
       home: Profile(),
     ));
 
-class Profile extends StatelessWidget {
+class Profile extends StatefulWidget {
+  @override
+  _ProfileState createState() => _ProfileState();
+}
+
+class _ProfileState extends State<Profile> {
+
+  int photoCount = 0;
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -29,7 +38,7 @@ class Profile extends StatelessWidget {
               ),
               Divider(
                 height: 40,
-                color: Colors.white,
+                color: Colors.orange,
               ),
               Text(
                 'NAME',
@@ -84,7 +93,41 @@ class Profile extends StatelessWidget {
                     ),
                   )
                 ],
-              )
+              ),
+              SizedBox(height: 5,),
+              Text(
+                '$photoCount',
+                style: TextStyle(
+                  color: Colors.grey[350],
+                  fontWeight: FontWeight.bold,
+                  fontSize: 22,
+                ),
+              ),
+              Expanded(child: SizedBox()),
+              Center(
+                child: Column(
+                  children: <Widget>[
+                    IconButton(
+                      onPressed: () {
+                        setState(() {
+                          photoCount += 1;
+                        });
+                      },
+                      iconSize: 40,
+                      icon: Icon(Icons.camera),
+                      color: Colors.orange,
+                      splashColor: Colors.white,
+                    ),
+                    Text(
+                        'Take a picture',
+                      style: TextStyle(
+                        color: Colors.orange,
+                        fontSize: 18,
+                      ),
+                    ),
+                  ],
+                ),
+              ),
             ],
           ),
         ));

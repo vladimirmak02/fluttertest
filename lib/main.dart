@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'quote.dart';
 
 void main() => runApp(MaterialApp(
       home: Home(),
@@ -11,10 +12,10 @@ class Home extends StatefulWidget {
 
 class _HomeState extends State<Home> {
 
-  List<String> alltexts = [
-    'Egor idiot',
-    'Mr pyle is devil',
-    'School is boring',
+  List<Quote> alltexts = [
+    Quote(text: 'Egor idiot',author: 'Vlad'),
+    Quote(text: 'Mr pyle is devil',author: 'Egor'),
+    Quote(text: 'School is boring',author: 'Everyone'),
   ];
 
   @override
@@ -26,11 +27,16 @@ class _HomeState extends State<Home> {
         centerTitle: true,
         backgroundColor: Colors.redAccent,
       ),
-      body: Column(
-        children: alltexts.map((tempText){
-          return Text(tempText);
-        }).toList(),
+      body: Container(
+        child: Center(
+          child: Column(
+            children: alltexts.map((tempText){
+              return Text('${tempText.text} - ${tempText.author}');
+            }).toList(),
+          ),
+        ),
       ),
+
     );
   }
 }
